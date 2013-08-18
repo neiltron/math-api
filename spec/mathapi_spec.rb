@@ -1,5 +1,4 @@
 require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
-require 'pp'
 
 API_ROOT = 'http://mathurl.com'
 ACCESSKEY = 123
@@ -33,6 +32,7 @@ describe Math::API do
       @api = Math::API.new( accesskey: ACCESSKEY, user_id: USER_ID, math_url: API_ROOT )
     end
 
+
     it "returns a response after creating records" do
 
       resp = @api.create_records({ timestamp: "12/12/2012", item_name: "item", amount: "1" })
@@ -41,16 +41,26 @@ describe Math::API do
 
     end
 
+
     it 'throws an error if item_name is not specified' do
+
       expect do
+
         @api.create_records({ timestamp: "12/12/2012", amount: "1" })
+
       end.to raise_error(ArgumentError)
+
     end
 
+
     it 'throws an error if amount is not specified' do
+
       expect do
+
         @api.create_records({ timestamp: "12/12/2012", item_name: "item" })
+
       end.to raise_error(ArgumentError)
+
     end
 
   end
