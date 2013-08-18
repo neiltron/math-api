@@ -1,4 +1,5 @@
 require 'httparty'
+require 'pp'
 
 module Math
   class API
@@ -23,9 +24,11 @@ module Math
 
 
     def authenticate
-      resp = self.class.get('/api/1/users/profile.json', { accesskey: @accesskey })
+
+      resp = self.class.get('/api/1/users/profile.json', query: { accesskey: @accesskey })
 
       raise Error.new("Unauthorized") unless resp.code == 200
+
     end
 
 
