@@ -13,7 +13,7 @@ module Math
 
     def initialize ( opts = { } )
 
-      self.class.base_uri    opts[:math_url] || 'http://math.dev'
+      self.class.base_uri    opts[:math_url] || 'http://mathematics.io'
       self.accesskey      =  opts[:accesskey]
       self.user_id        =  opts[:user_id]
 
