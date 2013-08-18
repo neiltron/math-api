@@ -26,7 +26,7 @@ describe Math::API do
     before(:all) do
       FakeWeb.clean_registry
 
-      FakeWeb.register_uri(:get, "#{API_ROOT}/api/1/users/profile.json", :status => ["200"])
+      FakeWeb.register_uri(:get, "#{API_ROOT}/api/1/users/profile.json?accesskey=#{ACCESSKEY}", :status => ["200"])
       FakeWeb.register_uri(:post, "#{API_ROOT}/api/1/users/#{USER_ID}/records.json", :status => ["201"])
 
       @api = Math::API.new( accesskey: ACCESSKEY, user_id: USER_ID, math_url: API_ROOT )
