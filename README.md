@@ -1,6 +1,6 @@
 # Math::Api
 
-TODO: Write a gem description
+API wrapper for Mathematics.io
 
 ## Installation
 
@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    @math = Math::API.new( accesskey: MATH_APIKEY, user_id: MATH_USERID, math_url: MATH_URL )
+    @math.create_records({ item_name: 'athing', amount: 25 })
+
+`math_url` is optional and will default to `mathematics.io`.
+
+`create_records` will also accept a `timestamp` argument. If none is specified, it will default to `Time.now`
 
 ## Contributing
 
