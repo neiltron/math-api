@@ -1,5 +1,8 @@
 # Math::Api
 
+[![Gem Version](https://badge.fury.io/rb/math-api.png)](http://badge.fury.io/rb/math-api)
+[![Code Climate](https://codeclimate.com/github/neiltron/math-api.png)](https://codeclimate.com/github/neiltron/math-api)
+
 API wrapper for Mathematics.io
 
 ## Installation
