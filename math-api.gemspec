@@ -12,6 +12,9 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{ API wrapper for Mathematics.io }
   gem.homepage      = "http://github.com/neiltron/math-api"
 
+  gem.add_dependency 'multi_json', '1.7.8'
+  gem.add_dependency 'httparty'
+
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
